@@ -1,13 +1,15 @@
 Package: NeurocienciasIntroData
-Title: What the Package Does (One Line, Title Case)
+Title: Paquete con Datos y Tutorales de Análisis de Datos
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Edgar",
+           family = "Morales",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "edgar.morales@aprendr.org")
+Description: Paquete con datos morfológicos de células que permiten el uso de técnicas de exploración de datos.
+  Permite explorar 3 conjuntos de datos de superficie celular, volumen y superficie de soma,
+  entre otras características recabandas para celulas del sistema nervioso de diversos organismos.
+  Estos datos se obtienen de la página neuromorpho.org usando el paquete neuromorphr neuromorphr.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
