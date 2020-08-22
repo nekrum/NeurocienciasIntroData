@@ -40,3 +40,5 @@ vignettes/*.pdf
 .Rproj.user
 
 *.Rproj
+
+/inst/tutorials/*/*.html

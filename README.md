@@ -6,3 +6,16 @@ Exploraremos set de datos de morfología celular de la página  http://neuromorp
 datos https://github.com/natverse/neuromorphr
 
 Este paquete contiene set de datos para explorar, limpiar y procesar.
+
+
+## Instalación
+
+```r
+devtools::install_github("nekrum/NeurocienciasIntroData")
+```
+
+## Correr tutorial
+
+```r
+learnr::run_tutorial("Paquetes", package = "NeurocienciasIntroData")
+```
