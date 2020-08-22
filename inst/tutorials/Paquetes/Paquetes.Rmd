@@ -1,0 +1,186 @@
+---
+title: "Como utilizar paquetes"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Instalación de Paquetes en R
+
+Un paquete de R son un conjunto de funciones, datos y documentación. Son considerados la manera mas sencilla de
+compartir codigo funcional. En específico para R existen **repositorios** de paquetes que estan de manera
+libre y gratuita en internet. El repositorio por default y mas confiable es 
+CRAN (**C**omprehensive **R** **A**rchive **N**etwork) que cuenta con mas de 6000 paquetes. Existe ademas repositorios 
+externos como los de **Bioconductor** con una orientación mas científica. Ademas podemos usar paquetes que se
+hospedan en servicios de [control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) en la nube 
+como [Github](https://github.com/), [Gitlab](https://gitlab.com/) y [Bitbucket](https://bitbucket.org/).
+
+En R se puede instalar paquetes usando la consola o la interfaz gráfica, usaremos la consolaya que son comandos básicos
+fáciles de ejecutar.
+
+
+
+### Instalar Paquetes
+
+Instalar un paquete es sencillo requiere acceso a internet y un comando:
+
+```{r install_ggplot, eval=FALSE}
+install.packages("ggplot2")
+```
+
+Esto instala el paquete para crear gráficos [ggplot2](https://ggplot2.tidyverse.org/). 
+
+Sí queremos instalar varios a la vez podemos hacerlo con un vector
+
+```{r install_some, eval=FALSE}
+install.packages(c("ggplot2", "dplyr"))
+```
+
+Con esto se instala **ggplot2** y [dplyr](https://dplyr.tidyverse.org/) un paquete para manipular datos o también 
+conocido como la gramática del procesamiento de datos ( _grammar of data manipulation_ ).
+
+*En este espacio puedes escribir comandos ejecutables de R.*
+
+Escribe el código para instalar el paquete **tidyverse**:
+
+```{r install_tidyverse, exercise=TRUE, exercise.eval=FALSE}
+
+```
+
+<div id="install_tidyverse">
+**Tip:** El parámetro de la función es el nombre del archivo, cuida tus comillas.
+</div>
+
+### Repositorios en Github
+
+Subir un paquete a los repositorios de CRAN puede ser un proceso largo sobre todo por que se requiere un código
+privado en diversas plataformas, bien probado y con un mantenimiento periodico. Algo similar pasa con **Bioconductor**
+cuyo uso no veremos de momento pero también representa un trabajo de manteminiento y calidad demandante.
+
+Si queremos usar paquetes creados por nosotros mismos, o nuestros compañeros es mas práctico subirlos a una plataforma 
+como github, bitbucket o gitlab. Para instalar el mismo necesitamos dos cosas, el paquete `devtools()` y el nombre 
+del **usuario/nombre_del paquete** lo cual suele ser parte de la **url** del 
+[repositorio](https://docs.github.com/es/github/getting-started-with-github/create-a-repo).
+
+Por ejemplo la dirección de este paquete es https://github.com/nekrum/NeurocienciasIntroData para lo cual usaremos la
+sección `nekrum/NeurocienciasIntroData`
+
+*Completa el código de instalación*
+
+Completa este comando de instalación de paquetes desde github
+
+```{r install_github, exercise=TRUE, exercise.lines = 3, exercise.eval=FALSE}
+devtools::install_github()
+```
+
+<div id="install_github">
+**Tip:** Recuerda que el parámetro es una mezcla nombre_susario/nombre_paquete
+</div>
+
+Instalar a partir de los diferentes repositorios en línea es el comando de instalación, para **bitbucket**
+`devtools::install_bitbucket()`, para **gitlab** `devtools::install_gitlab()`.
+
+> **Nota**: Debemos ser cuidadosos con los paquetes instalados de fuentes externas a CRAN o Bioconductor.
+> En general no son un problema si podemos ver el código o si conocemos al creador.
+
+### Actualizar paquetes
+
+En caso de que tengamos un paquete que requiere actualización podemos actulizar con el mismo comando 
+de instalación por ejemplo `install.packages('ggplot2')` o en el caso de repositorios 
+`devtools::install_bitbucket("usuario/Paquete")`. Sin embargo para la instalación de **CRAN** se puede usar el comando
+`update.packages()` que intentara actualizar todos los paquetes pidiendo confirmación para cada uno. Se puede omitir
+la confirmación con el **parámetro** _ask_`update.packages(ask = FALSE)`.
+
+> **Nota**: Usar el comando `update.packages()` sobre todo con el parámetro ask=FALSE, puede causar algunos problemas,
+> ya que los cambios de versiones pueden modificar algunas de sus funciones y nuestro código podría no correr 
+> de la misma forma.
+
+## Uso de las librerías
+
+### Cargar librería
+
+Para poder utilizar un paquete este requiere estar disponible en memoria. El comando que hace esto posible es
+`library()` y como parámetro se colocal el nombre del paquete sin comillas.
+
+Carga la librería de datos **NeurocienciasIntroData**:
+
+```{r carga_paquete, exercise=TRUE, exercise.eval=TRUE, exercise.timelimit = 100}
+library()
+```
+
+<div id="carga_paquete">
+**Tip:** En este caso puedes usar o no comillas.
+</div>
+
+Esto pondra disponible los datos que tiene este paquete como **neocortex.animal.size**
+
+```{r print-limit-hint, exercise=TRUE, exercise.setup = "carga_paquete"}
+head(neocortex.animal.size)
+```
+
+### Explorar paquetes
+
+Parte de las ventajas que tienen un paquete es la **documentación**, en ella se encuentra una ayuda sobre las
+características, funciones y datos con los que cuenta el paquete.
+
+Esto se puede consultar con dos comandos, `help()` y el simbolo `?`. Usando la función o nombre del dataset como 
+parámetro de `help(cars)`. Usando el simbolo `?` justo antes del nombre de la función o dataset, nos mostrará la
+documentación de ese elemento.
+
+Revisa la **documentación** del dataset `principal.cell.diff`
+
+```{r ayuda_dataset, exercise=TRUE}
+
+```
+
+<div id="ayuda_dataset">
+**Tip:** Puedes usar el comando help o el simbolo ?.
+</div>
+
+
+## Cuestionario
+
+### Preguntas
+
+```{r Cuesitonario}
+quiz(
+  question("¿Como se carga el paquete ggplot2 en memoria?",
+    answer("install.package(ggplot2)"),
+    answer("library(ggplot2)", correct = TRUE, message = "También se puede usar el parámetro entre comillas"),
+    answer("update.packages(ggplot2)"),
+    answer("library('ggplot2')", message = "También se puede usar el parámetro sin comillas"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("¿Cual es la fuente de datos oficial de R?",
+    answer("CRAN", correct = TRUE),
+    answer("Bioconductor"),
+    answer("Rstudio"),
+    answer("Github"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("¿Cual es el comando para instalar dplyr en R?",
+    answer("install.package(dplyr)"),
+    answer("install.packages('dplyr')", correct = TRUE, message = "Las comillas son muy importantes"),
+    answer("install.packages(dplyr)"),
+    answer("install.package('dplyr')"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("¿Que paquete se necesita tener instalado para hacer uso de paquetes en Github?",
+    answer("dplyr"),
+    answer("ggplot"),
+    answer("NeurocienciasIntroData"),
+    answer("devtools", correct = TRUE),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  )
+)
+```
+
