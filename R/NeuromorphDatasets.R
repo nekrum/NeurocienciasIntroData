@@ -155,3 +155,90 @@
 #' @source \url{http://aging.brain-map.org/}
 "protein.patholoqy"
 
+#' Reporte de casos covid
+#'
+#' Resumen de casos covid reportados por el Gobierno de México la totalidad de estos datos se
+#' pueden consultar en la página de la \href{https://www.gob.mx/salud/es/archivo/documentos}{secretaría de salud}.
+#'
+#'
+#'
+#' @format Data frame con 70 renglones y 20 columnas:
+#' \describe{
+#'   \item{Fecha}{ Fecha del Registro}
+#'   \item{SospechososNuevos}{Nuevos casos sospechosos}
+#'   \item{SospechososAcum}{Casos sospechados acumulados}
+#'   \item{SospechososPorcenCambio}{Porcentaje de cambio de casos sospechosos}
+#'   \item{NegativosNuevos}{Casos nuevos negativos}
+#'   \item{NegativosAcum}{Casos Negativos Acumulados}
+#'   \item{NegativosPorcenCambio}{Porcentaje de cambio casos acumulados}
+#'   \item{ConfirmadosNuevos}{Casos confirmados nuevos}
+#'   \item{ConfirmadosAcum}{Casos confirmados acumulados}
+#'   \item{ConfirmadosPorcenCambio}{Porcentaje de cambio confirmados}
+#'   \item{RecuperadosNuevos}{Casos recuperados nuevos}
+#'   \item{RecuperadosAcum}{Acumulado de casos recuperados}
+#'   \item{RecuperadosPorcenCambio}{Porcentaje de cambio de casos recuperados}
+#'   \item{FallecidosNuevos}{Fallecimientos nuevos}
+#'   \item{FallecidosAcum}{Fallecimientos acumulados}
+#'   \item{FallecidosPorcenCambio}{Porcentaje de cambio fallecidos}
+#'   \item{EstudiadosNuevos}{Estudios nuevos}
+#'   \item{EstudiadosAcum}{Estudios acumulados}
+#'   \item{EstudiadosPorcenCambio}{Porcentaje de cambio de estudios}
+#'   \item{ActivosAcum}{Activos acumulados}
+#' }
+#' @source \url{https://www.gob.mx/salud/es/archivo/documentos}
+"reporte.casos.covid"
+
+#' Datos abiertos de Covid
+#'
+#' Fragmento de datos abiertos de covid para el "2020-05-04" se puede consultar la totalidad de datos
+#' en la página de la \href{https://www.gob.mx/salud/documentos/datos-abiertos-152127}{secretaría de salud}.
+#' En esta misma página podemos consultar el **DICCIONARIO DE DATOS** con las definiciones de cada uno de los
+#' campos de la tabla.
+#'
+#'
+#' @format Data frame con 100041 renglones y 40 columnas:
+#' \describe{
+#'   \item{FECHA_ACTUALIZACION}{Fecha en la que se actualizo el registro}
+#'   \item{ID_REGISTRO}{Identificador único de registro}
+#'   \item{ORIGEN}{Origen del registro: 1 USMER, 2 FUERA DE USMER, 99 NO ESPECIFICADO}
+#'   \item{SECTOR}{Sector Salud: 1 CRUZ ROJA, 2 DIF, 3 ESTATAL,4 IMSS, 5 IMSS BIENESTAR, 6 ISSSTE, 7 MUNICIPAL,
+#'     8 PEMEX, 9 PRIVADA, 20 SEDENA, 11 SEMAR, 12 SSA, 13 UNIVERSITARIO, 99 NO ESPECIFICADO}
+#'   \item{ENTIDAD_UM}{Identificador de municipio _consultar diccionario de datos_}
+#'   \item{SEXO}{Sexo: 1 MUJER, 2 HOMBRE, 99 NO ESPECIFICADO}
+#'   \item{ENTIDAD_NAC}{Entidad de nacionalidad _consultar diccionario de datos_}
+#'   \item{ENTIDAD_RES}{Entidad que genera el resultado _consultar diccionario de datos_}
+#'   \item{MUNICIPIO_RES}{Código de Municipio _consultar diccionario de datos_}
+#'   \item{TIPO_PACIENTE}{Tipo de paciente: 1 AMBULATORIO, 2 HOSPITALIZADO, 99 NO ESPECIFICADO}
+#'   \item{FECHA_INGRESO}{Fecha de ingreso al sistema}
+#'   \item{FECHA_SINTOMAS}{Fecha en que presenta los sintomas}
+#'   \item{FECHA_DEF}{Fecha de fallecimiento}
+#'   \item{INTUBADO}{El paciente  fue intubado: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{NEUMONIA}{Presento neumonía: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{EDAD}{Edad del paciente}
+#'   \item{NACIONALIDAD}{Nacionalidad del paciente: 1 MEXICANA, 2 EXTRANJERA, 99 NO ESPECIFICADO}
+#'   \item{EMBARAZO}{Hay embarazo: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{HABLA_LENGUA_INDIG}{Habla lengua indigena: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{DIABETES}{Presenta diabetes: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{EPOC}{Enfermedad pulmonar obstructiva crónica: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{ASMA}{ASMA: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{INMUSUPR}{Inmunosuprimido: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{HIPERTENSION}{Presenta hipertensión: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{OTRA_COM}{Otra complicación: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{CARDIOVASCULAR}{Enfermedad cardiovascular: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{OBESIDAD}{Presenta obesidad: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{RENAL_CRONICA}{Padecimiento renal crónico: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{TABAQUISMO}{Tabaquismo: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{OTRO_CASO}{Otro caso: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{RESULTADO}{Resultado: 1 POSITIVO SARS-CoV-2, 2 NO POSITIVO SARS-CoV-2, 3 RESULTADO PENDIENTE}
+#'   \item{MIGRANTE}{Es migrante: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{PAIS_NACIONALIDAD}{País de nacionalidad}
+#'   \item{PAIS_ORIGEN}{País de origen}
+#'   \item{UCI}{Unidad de cuidados intesivos: 1 SI, 2 NO, 97 NO APLICA, 98 SE IGNORA, 99 NO ESPECIFICADO}
+#'   \item{GrupoEdad}{Segmentación por grupo de edad}
+#'   \item{Fallecio}{Falleció}
+#'   \item{DiferenciaIngreso}{Diferencia de ingreso (días)}
+#'   \item{DiferenciaFallecimiento}{Diferencia con fallecimiento (días)}
+#'   \item{DiferenciaInicioSintomas}{Diferencia con inicio de sintomas (días)}
+#' }
+#' @source \url{https://www.gob.mx/salud/es/archivo/documentos}
+"datos.abiertos.covid"
