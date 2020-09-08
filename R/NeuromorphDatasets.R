@@ -153,7 +153,7 @@
 #'   \item{ab42_pg_per_mg}{42 amino-acid beta-amyloid peptide derived from the amyloid precursor protein (APP); believed to be more amyloidogenic than the 40-amino acid form; found in amyloid plaques in aging and Alzheimer's disease.}
 #' }
 #' @source \url{http://aging.brain-map.org/}
-"protein.patholoqy"
+"protein.pathology"
 
 #' Reporte de casos covid
 #'

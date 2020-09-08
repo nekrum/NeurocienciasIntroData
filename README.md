@@ -19,7 +19,7 @@ deterioro neuronal que peude estar asociado a TBI y otros padecimientos.
 
 - [Epilepsia](https://vincentarelbundock.github.io/Rdatasets/doc/MASS/epil.html) Son datos de las crísis epilepticas 
 que se dan en un lapso de 2 semanas en un grupo de 59 sujetos. Este dataset se encuentra dentro del paquete `MASS()`
-disponible en cran e instalable mediante `install.packages('MAS')`
+disponible en cran e instalable mediante `install.packages('MASS')`
 
 ## Instalación del Paquete
 
