@@ -5,14 +5,7 @@
 \alias{rows.genes}
 \title{Información de los genes}
 \format{
-Data frame con 50281 renglones y 5 columnas:
-\describe{
-\item{gene_id}{Número de identificación del gen}
-\item{chromosome}{Cromosoma en el que su ubica el gen}
-\item{gene_entrez}{Identificador de la base NCBI Entrez}
-\item{gene_symbol}{Simbolo del gen}
-\item{gene_name}{Nombre completo del gen}
-}
+An object of class \code{data.table} (inherits from \code{data.frame}) with 50281 rows and 5 columns.
 }
 \source{
 \url{http://aging.brain-map.org/}
@@ -24,5 +17,15 @@ rows.genes
 Información de los genes incluidos con la base, se debe usar en conjunto con
 el dataset normalizado para poder identificar el gen que se reporta.
 el campo para realizar la unión es el gene_id.
+}
+\details{
+frame con 50281 renglones y 5 columnas:
+\describe{
+\item{gene_id}{Número de identificación del gen}
+\item{chromosome}{Cromosoma en el que su ubica el gen}
+\item{gene_entrez}{Identificador de la base NCBI Entrez}
+\item{gene_symbol}{Simbolo del gen}
+\item{gene_name}{Nombre completo del gen}
+}
 }
 \keyword{datasets}
