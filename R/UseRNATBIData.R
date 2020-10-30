@@ -68,6 +68,6 @@ GetRNADataSet <- function(save.file = TRUE, clean.tmp.files = FALSE) {
       'Se ha borrado el archivo \n' %+%
         crayon::green(tmp.path)
     )
-    return(normalized.rna.measures)
+    return(normalized.rna.measures[])
   }
 }

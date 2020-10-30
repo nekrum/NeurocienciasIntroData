@@ -32,13 +32,29 @@ install.packages('devtools')
 Con esto podemos instalar este paquete en el equipo:
 
 ```r
-devtools::install_github("nekrum/NeurocienciasIntroData")
+devtools::install_github("nekrum/NeurocienciasIntroData", upgrade = 'never')
 ```
 
 > En caso de haber cambios ejecutar este mismo comando una vez mas reinstalará el paquete nuevo. Puedes revisar 
 la versión del paquete en el archivo [DESCRIPTION](DESCRIPTION) y en tu maquina ó espacio de trabajo con el comando
 `packageVersion("NeurocienciasIntroData")`
 
+### Alternativa
+
+Una alternativa de isntalación es usar la paquetería `remotes()` que es mas ligero
+que devtools. De hecho es preferible este método si no queremos instalar otras dependencias.
+
+#### Instalamos remotes
+
+```r
+install.packages('remotes')
+```
+
+#### Instalamos el paquete
+
+```r
+remotes::install_github("nekrum/NeurocienciasIntroData", upgrade = 'never')
+```
 ## Correr tutorial
 
 Para facilitar el uso de R hemos creado algunos ejercicios en este paquete para usarlo necesitas el paquete
