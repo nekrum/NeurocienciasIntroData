@@ -45,8 +45,8 @@ GetRNADataSet <- function(save.file = TRUE, clean.tmp.files = FALSE) {
   )
   fread.command <- paste0("unzip -p ", tmp.path, " fpkm_table_normalized.csv")
   normalized.rna.measures <- data.table::fread(cmd = fread.command)
-  setnames(normalized.rna.measures, "gene_id \\ rnaseq_profile_id", "gene_id")
-  normalized.rna.measures <- melt(
+  data.table::setnames(normalized.rna.measures, "gene_id \\ rnaseq_profile_id", "gene_id")
+  normalized.rna.measures <- data.table::melt(
     normalized.rna.measures,
     id.vars = "gene_id",
     variable.name = "rnaseq_profile_id"
@@ -54,7 +54,7 @@ GetRNADataSet <- function(save.file = TRUE, clean.tmp.files = FALSE) {
   normalized.rna.measures[, rnaseq_profile_id := as.factor(rnaseq_profile_id)]
   if (save.file) {
     save.file.path <- file.path(tmp.dir, "normalized.rna.measure.csv")
-    fwrite(normalized.rna.measures, file = save.file.path)
+    data.table::fwrite(normalized.rna.measures, file = save.file.path)
     cat(
       'Se han guardado los datos en \n' %+%
         crayon::green(save.file.path)
