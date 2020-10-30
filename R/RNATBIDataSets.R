@@ -4,7 +4,7 @@
 #' el dataset normalizado para poder identificar el gen que se reporta.
 #' el campo para realizar la unión es el gene_id.
 #'
-#' @format Data frame con 50281 renglones y 5 columnas:
+#' @details frame con 50281 renglones y 5 columnas:
 #' \describe{
 #'   \item{gene_id}{Número de identificación del gen}
 #'   \item{chromosome}{Cromosoma en el que su ubica el gen}
@@ -37,21 +37,3 @@
 #' }
 #' @source \url{http://aging.brain-map.org/}
 "column.samples"
-
-#' Expresión de RNA normalizada
-#'
-#' Datos con las tomas de expresión normalizadas para los diferentes genes
-#' y los diferentes perfiles de las sequencias de RNA.
-#'
-#' Para saber a que gen pertenece cada muestra es necesario cruzar los datos con
-#' los datos de rows.genes, y para las sequecias de RNA el cruce debe hacerse con
-#' los datos de información de las muestras.
-#'
-#' @format Data frame con 18955937 renglones y 3 columnas:
-#' \describe{
-#'   \item{gene_id}{Número de identificación del gen}
-#'   \item{rnaseq_profile_id}{Identificador de sequencia de RNA}
-#'   \item{value}{Valores normalizados de la expresión del RNA}
-#' }
-#' @source \url{http://aging.brain-map.org/}
-"normalized.rna.measures"
