@@ -41,7 +41,8 @@ GetRNADataSet <- function(save.file = TRUE, clean.tmp.files = FALSE) {
   download.file("http://aging.brain-map.org/api/v2/well_known_file_download/502999992", tmp.path)
   cat(
     'Se ha descargado el archivo con los datos en \n' %+%
-      crayon::green(tmp.path)
+      crayon::green(tmp.path) %+%
+      '\n'
   )
   fread.command <- paste0("unzip -p ", tmp.path, " fpkm_table_normalized.csv")
   normalized.rna.measures <- data.table::fread(cmd = fread.command)
@@ -56,8 +57,9 @@ GetRNADataSet <- function(save.file = TRUE, clean.tmp.files = FALSE) {
     save.file.path <- file.path(tmp.dir, "normalized.rna.measure.csv")
     data.table::fwrite(normalized.rna.measures, file = save.file.path)
     cat(
-      'Se han guardado los datos en \n' %+%
-        crayon::green(save.file.path)
+      '\n Se han guardado los datos en \n' %+%
+        crayon::green(save.file.path) %+%
+        '\n'
     )
   }
   if(clean.tmp.files) {
