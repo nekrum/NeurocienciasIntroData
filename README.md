@@ -15,7 +15,8 @@ pandemia. Los datos son tomados de las [páginas oficiales del gobierno](https:/
 
 - TBI (Traumatic Brain Injury) Estos datos se encuentran disponibles al cargar el paquete y son proporcionados por el 
 proyecto de [Demencia y TBI](http://aging.brain-map.org/). Constan de marcadores para proteínas relacionadas con el 
-deterioro neuronal que peude estar asociado a TBI y otros padecimientos.
+deterioro neuronal que peude estar asociado a TBI y otros padecimientos. Este set de datos incluye información a nivel 
+mRNA, la cual se puede descargar mediante una función. Mas información en la ayuda del paquete.
 
 - [Epilepsia](https://vincentarelbundock.github.io/Rdatasets/doc/MASS/epil.html) Son datos de las crísis epilepticas 
 que se dan en un lapso de 2 semanas en un grupo de 59 sujetos. Este dataset se encuentra dentro del paquete `MASS()`
